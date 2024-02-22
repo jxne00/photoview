@@ -1,4 +1,4 @@
-# pprint
+# photoview
 
 A Windows-based photo printing application.
 
