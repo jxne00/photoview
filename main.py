@@ -11,7 +11,6 @@ class PhotoViewerApp:
         self.root = root
         self.selected_image_path = None
         self.bg_color = "#1B2430"
-        self.button_color = "#2E3B4E"
         self.image_list = []
         self.current_image_index = 0
         self.init_ui()
@@ -30,7 +29,7 @@ class PhotoViewerApp:
             buttons_frame,
             text="Open Folder",
             command=self.select_folder,
-            bg=self.button_color,
+            bg="#212c3d",
             fg="white",
             relief="flat",
             font=("Helvetica", 10, "bold"),
@@ -44,7 +43,7 @@ class PhotoViewerApp:
             buttons_frame,
             text="Print",
             command=self.print_image,
-            bg=self.button_color,
+            bg="#212c3d",
             fg="white",
             relief="flat",
             font=("Helvetica", 10, "bold"),
@@ -52,6 +51,20 @@ class PhotoViewerApp:
             pady=5,
         )
         print_button.grid(row=0, column=1, padx=5)
+
+        # exit button
+        exit_button = Button(
+            buttons_frame,
+            text="Exit",
+            command=self.root.quit,
+            bg="#212c3d",
+            fg="white",
+            relief="flat",
+            font=("Helvetica", 10, "bold"),
+            padx=20,
+            pady=5,
+        )
+        exit_button.grid(row=0, column=2, padx=5)
 
         # frame to hold images
         frame = Frame(self.root, bg=self.bg_color)
@@ -70,12 +83,6 @@ class PhotoViewerApp:
 
         self.frame_inside_canvas = Frame(canvas, bg=self.bg_color)
         canvas.create_window((0, 0), window=self.frame_inside_canvas, anchor="nw")
-
-        # button to exit
-        exit_button = Button(
-            self.root, text="Exit", command=self.root.quit, bg=self.bg_color, fg="white"
-        )
-        exit_button.pack(side="bottom", pady=10)
 
     def select_folder(self):
         # clear the frame
