@@ -1,6 +1,4 @@
-# pprint
-
-A Windows-based photo printing application.
+# photoview
 
 -   Only supports Windows OS
 
@@ -16,4 +14,4 @@ A Windows-based photo printing application.
 
 4. Install dependencies: `pip install -r requirements.txt`
 
-5. Run with `python main.py`
+5. Run with: `python main.py`
