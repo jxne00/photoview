@@ -15,3 +15,13 @@
 4. Install dependencies: `pip install -r requirements.txt`
 
 5. Run with: `python main.py`
+
+## Preview
+
+<p align="center">
+  <img src="https://github.com/jxne00/photoview/blob/main/assets/pv-demo1.jpg" alt="Photoview Screenshot 1" width="800">
+</p>
+
+<p align="center">
+  <img src="https://github.com/jxne00/photoview/blob/main/assets/pv-demo2.jpg" alt="Photoview Screenshot 2" width="800">
+</p>
